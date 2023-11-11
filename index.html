@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Day 2 || new Qrcode</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container_tools">
+            <div class="container_tools-background">
+                <label for="container_tools-background-color">Chọn Màu Nền</label>
+                <input type="color" id="container_tools-background-color" title="colorBackground">
+            </div>
+            <div class="container_tools-element">
+                <label for="container_tools-element-color" class="container_tools-element-color"> chọn màu nền phần tử</label>
+                <input type="color" id="container_tools-element-color" title="ColorElement">
+            </div>
+            <select id="container_size">
+                <option value="value1">100X100</option>
+                <option value="value2">200X200</option>
+                <option value="value3">300X300</option>
+                <option value="value4">400X400</option>
+                <option value="value5">500X500</option>
+            </select>
+        </div>
+        <div class="container_input">
+            <input type="text" placeholder="nhập chữ hoặc link của bạn">
+            <ion-icon name="checkmark-circle-outline" id="container_input-btn"></ion-icon>
+        </div>
+        <div class="container_Qrcode">
+            
+        </div>
+    </div>
+    <script src="NewQr.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- thư viên tạo qrcode  -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</body>
+</html>

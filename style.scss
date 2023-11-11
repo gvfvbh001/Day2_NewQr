@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@mixin display(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    @include display();
+}
+.container{
+    width: 40%;
+    height: 600px;
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+    .container_tools{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .container_tools-background{
+            margin-right: 5px; 
+            @include display();
+            flex-direction: column;
+            label{
+                width: 100px;
+            }
+            input{
+                width: 10rem;
+                height: 3rem;
+                border: none;
+                outline: none;
+            }
+        }
+        .container_tools-element{
+            margin-right: 5px; 
+            @include display();
+            flex-direction: column;
+            label{
+                width: 10rem;
+            }
+            input{
+                width: 10rem;
+                height: 3rem;
+                border: none;
+                outline: none;
+                
+            }
+        }
+        select{
+            width: 7rem;
+            height: 3rem;
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+}
+.container_input {
+    width: 20rem;
+    position: relative;
+    input{
+    margin: 10px;
+    width: 20rem;
+    height: 3rem;
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+    outline: none;
+    }
+    ion-icon{
+        width: 5rem;
+        height: 3rem;
+        position: absolute;
+        right: -30px;
+        top: 10px;
+    }
+}
+.container_Qrcode{
+    width: 100%;
+    height: 77%;
+    border: 1px solid #333;
+    border-radius: 20px;
+    text-align: center;
+    @include display();
+}
+@media screen and(min-width: 550px) and (max-width:1080px){
+    .container{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .container_tools-element-color,#container_tools-background-color{
+        width: 3rem;
+    }
+    #container_tools-element-color,#container_tools-background-color{
+        width: 5rem;
+    }
+
+}
