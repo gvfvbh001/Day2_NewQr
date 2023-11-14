@@ -22,6 +22,11 @@ class newQr{
         let colorBackground = e.value;
         this.Qrcode.style.background = colorBackground;
     }
+    inputColor(e){
+        let colorE = e.value;
+        console.log(colorE);
+        this.Qrcode.style.color = colorE;
+    }
     inputText(e){
         let title = e.value;
         return title;
@@ -31,7 +36,8 @@ class newQr{
         let create = new QRCode(this.Qrcode,{
             text: this.inputText(e),
             width: x,
-            height:y
+            height:y,
+            color: "red",
         });
         console.log(create);
     }   
@@ -39,6 +45,9 @@ class newQr{
     listenEvent(){
         this.colorBackground.addEventListener("change",()=>{
             this.inputColorBg(this.colorBackground);
+        });
+        this.colorFont.addEventListener("change",()=>{
+            this.inputColor(this.colorFont);
         });
         this.sizeQr.forEach((item)=>{
             item.addEventListener("change",()=>{
@@ -64,6 +73,7 @@ class newQr{
         });
         this.btn.addEventListener("click",()=>{
             this.NewQrCode(this.input , this.WIDTH, this.HEIGHT);
+            clearInterval(this.NewQrCode);
         })
     }
 }
